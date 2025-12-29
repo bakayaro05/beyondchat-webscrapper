@@ -30,14 +30,38 @@ const allarticles = await page.evaluate(()=>{
    const articles = document.querySelectorAll('article')
    return Array.from(articles).slice(0,5).map((article)=>{
      const title = article.querySelector('a').getAttribute('aria-label');
-     const url = article.querySelector('a').getAttribute('href');
+     const url = article.querySelector('a').getAttribute('href'); 
      return {title,url}
    })
 });
 
+const fullArticles = [];
+const source = "https://beyondchats.com/blogs"
+//for scraping the contents.
+for (const article of allarticles) {
+  const page2 = await browser.newPage();
+  await page2.goto(article.url);
+  const content = await page2.evaluate(() => {
+  const container = document.querySelector(
+    'div.elementor-widget-theme-post-content'
+  );
+  return container ? container.innerText.trim() : '';
+});
+
+
+  await page2.close();
+
+  fullArticles.push({
+    ...article,
+    content,
+    source
+  });
+}
+
+
 await browser.close();
 
-console.log(allarticles);
+console.log(fullArticles);
 
 }
 

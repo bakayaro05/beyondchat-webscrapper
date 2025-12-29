@@ -1,0 +1,27 @@
+###GET endpoint to check if the website loads.
+GET http://localhost:5000
+
+### GET endpoint for READING.
+GET http://localhost:5000/articles
+Content-Type: application/json
+
+### POST endpoint for CREATING
+POST http://localhost:5000/articles
+Content-Type: application/json
+
+{
+  "title": "Chatbots Magic: Beginner’s Guidebook",
+  "url": "https://beyondchats.com/blogs/introduction-to-chatbots/",
+  "content": "Embrace the evolution by understanding your website’s unique needs and leveraging Chatbots to create meaningful user experiences.\n\nIn the fast-paced world of technology, the buzz around “Chatbots” is louder than ever! Whether it’s for customer service or your virtual helper, these cool digital buddies have become an essential part of our online world. Wondering what makes this virtual chit-chat so special? Well, get ready for an awesome adventure!\n\nWe’re diving deep into the fascinating world of Chatbots. We’ll uncover what they are, why they matter, how they work, and why everyone’s talking about these digital pals. Ready for a tech-savvy journey? Let’s roll!\n\nWhat is an AI Chatbot?\n\nImagine having a personal assistant available 24/7, ready to respond to your queries, guide you through tasks, and engage in meaningful conversations. That’s precisely what an AI chatbot is designed to do. It is a computer program equipped with artificial intelligence that enables it to simulate natural language conversations with users.\n\nUnlike static web pages or traditional apps, chatbots bring a human touch to digital interactions. They leverage natural language processing (NLP) and machine learning algorithms to understand user inputs and provide relevant responses. This ability to understand and respond in real-time makes chatbots a dynamic and engaging tool for various applications.\n\nWhy Exactly Do You Need a Chatbot?\n\nThe question lingers: Why are chatbots garnering so much attention, and why do businesses and websites increasingly find them indispensable?\n\n1. Enhanced Customer Engagement: It redefines customer interaction by offering instant responses and personalized experiences.\n2. 24/7 Availability: Unlike human agents, chatbots don’t need to sleep or take breaks.\n3. Efficient Problem Resolution: Chatbots are quick problem solvers.\n4. Data Collection and Analysis: Chatbots are adept at collecting user data during conversations.\n\nHow Do AI Chatbots Work?\n\n1. Natural Language Processing (NLP): NLP is the backbone of chatbots.\n2. Machine Learning Algorithms: Chatbots learn from every interaction.\n3. User Input Analysis: The chatbot analyzes intent behind messages.\n4. Integration with Backend Systems: Chatbots connect with backend systems for real-time data.\n\nAre Chatbots Universally Helpful to All Websites?\n\n1. E-commerce Websites\n2. Customer Support Portals\n3. Informational Websites\n4. Service-Based Websites\n\nConclusion\n\nIn conclusion, the world of chatbots is a dynamic and transformative one. These virtual assistants are not just a trend; they represent a shift in how we interact with technology.\n\nSo, the next time you encounter a chatbot online, engage in a conversation—you might be pleasantly surprised.\n\nFor more such amazing content follow us here!",
+  "source": "https://beyondchats.com/blogs"
+}
+
+
+### PUT endpoint for UPDATING 
+PUT http://localhost:5000/articles/1
+Content-Type: application/json
+
+{
+    "content" : "NEW UPDATED CONTENT",
+    "source" : "NEW UPDATE SOURCE"
+}
