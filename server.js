@@ -1,11 +1,12 @@
 import express from 'express';
 import articleRoute from './routes/articleRoute.js'
+import cors from 'cors'
 
 
-const PORT=5000
+
 const app = express()
 app.use(express.json())
-
+app.use(cors()) 
 
 app.get('/',(req,res)=>{
 
@@ -14,6 +15,9 @@ app.get('/',(req,res)=>{
 
 app.use('/articles',articleRoute)
 
-app.listen(PORT,()=>{
-     console.log(`Hi There, Server has started on : ${PORT}`)
-})
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
