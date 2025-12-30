@@ -33,11 +33,35 @@ Fetch API
 │   └── db.js                  # SQLite DB connection
 │
 ├── frontend/
-│   ├── src/
 │   ├── public/
+│   │   └── vite.svg
+│   │
+│   ├── src/
+│   │   ├── api/
+│   │   │   └── articles.js
+│   │   │       # Frontend API layer (calls Express endpoints)
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── ArticleList.jsx
+│   │   │   │   # Displays list of articles
+│   │   │   └── ArticleDetail.jsx
+│   │   │       # Displays single article + enrich action
+│   │   │
+│   │   ├── assets/
+│   │   │   └── react.svg
+│   │   │
+│   │   ├── App.jsx
+│   │   │   # Root React component
+│   │   ├── main.jsx
+│   │   │   # React entry point
+│   │   ├── App.css
+│   │   └── index.css
+│   │
 │   ├── index.html
+│   ├── vite.config.js
+│   ├── eslint.config.js
 │   ├── package.json
-│   └── vite.config.js
+│   └── package-lock.json
 │
 ├── routes/
 │   └── articleRoute.js        # Article APIs (Route endpoints Where CRUDS are Defined)
