@@ -1,6 +1,8 @@
 import puppeteer from 'puppeteer';
 
 
+
+
 const main = async()=>{
 
 const browser = await puppeteer.launch();
@@ -67,3 +69,4 @@ console.log(fullArticles);
 
 
 main();
+

@@ -40,10 +40,10 @@ router.put('/:id',(req,res)=>{
   try{
 
     const {id} =req.params
-    const {content , source} = req.body
+    const {content , source, url} = req.body
 
-    const updateArticle= db.prepare('UPDATE articles SET  structured_content = ? ,  new_source = ? WHERE id = ? ')
-    updateArticle.run(content,source,id)
+    const updateArticle= db.prepare('UPDATE articles SET  structured_content = ? ,  new_source = ?, url = ? WHERE id = ? ')
+    updateArticle.run(content,source,url,id)
      res.json({message : "Updated."})     
 
   }
