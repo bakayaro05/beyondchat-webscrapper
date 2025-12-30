@@ -26,7 +26,7 @@ Frontend
 
 Vite + React
 Fetch API
-
+<pre>
 📁 Project Structure
 .
 ├── database/
@@ -54,7 +54,7 @@ Fetch API
 ├── .env
 ├── package.json
 └── README.md
-
+</pre>
 
 ⚙️ Local Setup Instructions
 
@@ -85,7 +85,7 @@ Backend runs on:
 Frontend runs on:
 http://localhost:5173
 
-
+<pre>
 Data Flow / Architecture Diagram
 
   High-Level Architecture
@@ -144,7 +144,7 @@ Data Flow / Architecture Diagram
 |   SQLite Database    |
 | (Updated Enrichment) |
 +----------------------+
-
+</pre>
 
 Detailed Data Flow
 
@@ -266,7 +266,7 @@ Metadata (sources, timestamps if applicable)
 🔹 Step 7: Response to Frontend
 Backend returns the updated article object
 Frontend re-renders the article with enriched content
-
+<pre>
 Internal Enrichment Flow Diagram
 
 React UI
@@ -294,4 +294,4 @@ Express Response
    |
    v
 React UI
-
+</pre>
